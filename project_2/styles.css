@@ -1,0 +1,62 @@
+/* General body styling for a clean layout */
+body {
+  font-family: Arial, sans-serif; /* Sets a clean, readable font */
+  padding: 0; /* Removes any default padding around the page */
+  margin: 0; /* Removes default margin to ensure proper alignment */
+}
+
+/* Styling for the page title */
+h1 {
+  text-align: center; /* Centers the heading */
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+/* Grid container to hold project cards responsively */
+.container {
+  display: grid; /* Enables CSS Grid layout */
+  gap: 20px; /* Creates space between grid items */
+  padding: 0 20px; /* Adds padding on the left and right for spacing */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* Auto-fills the grid with columns, minimum column width is 150px */
+}
+
+/* Styling for each project card */
+.project_container {
+  background-color: #f0f0f0; /* Light gray background for the card */
+  padding: 15px; /* Adds internal spacing within the card */
+  border-radius: 8px; /* Slight rounding of card corners */
+  text-align: center; /* Centers text inside the card */
+}
+
+/* Placeholder image styling within each project card */
+.project_container img {
+  width: 100%; /* Ensures the image takes full width of the container */
+  height: 150px; /* Fixed height for uniformity */
+  border-radius: 5px; /* Rounded corners for the image */
+}
+
+/* Heading inside each project card */
+.project_container h2 {
+  font-size: 18px; /* Sets a medium heading size */
+  margin: 10px 0; /* Adds spacing above and below the heading */
+}
+
+/* Paragraph styling inside the card for project descriptions */
+.project_container p {
+  font-size: 14px; /* Smaller font size for descriptions */
+  color: #555; /* Grayish color for text to contrast with the background */
+}
+
+/* Media query: for screens wider than 600px */
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* Displays 3 cards per row */
+  }
+}
+
+/* Media query: for screens wider than 1024px */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr); * Displays 5 cards per row */
+  }
+}
